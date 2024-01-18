@@ -1,0 +1,5 @@
+@media (max-width: 1000px) {
+    .mobNot{display: none}
+    h1{font-size: 32px; line-height: 36px}
+    .deskNot{display: flex}
+}
