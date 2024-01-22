@@ -147,6 +147,89 @@
 <div class="mx-4 lg:mx-20 mt-24 flex flex-col gap-2">
     <p class="px-4 py-1 bg-dark-blue text-white text-xs self-start">О продукции</p>
     <h1 class="blue">Расчет стоимости</h1>
+    <div class="flex flex-col gap-2 mt-6 lg:hidden">
+        <div class="p-4 border">
+            <div class="grid grid-cols-3 gap-1.5 borderBottom">
+                <p class="text-gray-400">Размер рулона</p>
+                <p class="text-gray-400">Диаметр</p>
+                <p class="text-gray-400">Цена за 1 м²</p>
+                <p class="blue mb-4">100x100</p>
+                <p class="blue">2.7</p>
+                <p class="blue">290 ₸</p>
+            </div>
+            <div class="flex items-center justify-between mt-4">
+                <div class="flex gap-4 items-center">
+                    <p class="text-gray-400 bg-white">Кол-во</p>
+                    <input value="100" class="p-3 bgNOt">
+                </div>
+                <p class="blue"><span class="text-gray-400">Итого</span> 29 000 ₸</p>
+            </div>
+        </div>
+        <div class="p-4 border">
+            <div class="grid grid-cols-3 gap-1.5 borderBottom">
+                <p class="text-gray-400">Размер рулона</p>
+                <p class="text-gray-400">Диаметр</p>
+                <p class="text-gray-400">Цена за 1 м²</p>
+                <p class="blue mb-4">100x100</p>
+                <p class="blue">2.7</p>
+                <p class="blue">290 ₸</p>
+            </div>
+            <div class="flex items-center justify-between mt-4">
+                <div class="flex gap-4 items-center">
+                    <p class="text-gray-400 bg-white">Кол-во</p>
+                    <input value="100" class="p-3 bgNOt">
+                </div>
+                <p class="blue"><span class="text-gray-400">Итого</span> 29 000 ₸</p>
+            </div>
+        </div>
+        <div class="p-4 border">
+            <div class="grid grid-cols-3 gap-1.5 borderBottom">
+                <p class="text-gray-400">Размер рулона</p>
+                <p class="text-gray-400">Диаметр</p>
+                <p class="text-gray-400">Цена за 1 м²</p>
+                <p class="blue mb-4">100x100</p>
+                <p class="blue">2.7</p>
+                <p class="blue">290 ₸</p>
+            </div>
+            <div class="flex items-center justify-between mt-4">
+                <div class="flex gap-4 items-center">
+                    <p class="text-gray-400 bg-white">Кол-во</p>
+                    <input value="100" class="p-3 bgNOt">
+                </div>
+                <p class="blue"><span class="text-gray-400">Итого</span> 29 000 ₸</p>
+            </div>
+        </div>
+    </div>
+    <div class=" mt-4 check bg-light-gray2 py-12 px-6 flex flex-col w-full gap-8 lg:hidden">
+        <p class="lgText text-2xl blue">Итоговый чек</p>
+        <div class="flex flex-col gap-4">
+            <p class="blue">Продукция:</p>
+            <div class="grid grid-cols-3  gap-2">
+                <p class="text-gray-400 text-sm">100x100 (2.7)</p>
+                <p class="text-sm">100 шт</p>
+                <p class="text-sm">29 000 ₸</p>
+                <p class="text-gray-400 text-sm">100x100 (2.7)</p>
+                <p class="text-sm">100 шт</p>
+                <p class="text-sm">29 000 ₸</p>
+                <p class="text-gray-400 text-sm">100x100 (2.7)</p>
+                <p class="text-sm">100 шт</p>
+                <p class="text-sm">29 000 ₸</p>
+            </div>
+        </div>
+        <div class="flex flex-col gap-4">
+            <p class="blue">Доставка:</p>
+            <select class="w-full py-3" name="Выберите город">
+            </select>
+            <div class="flex justify-between">
+                <p class="text-gray-400">Стоимость</p>
+                <p class="blue">По запросу</p>
+            </div>
+        </div>
+        <div class="flex flex-col gap-4">
+            <button class="bg-light-blue2 px-12 py-4 text-white">Оставить заявку</button>
+            <p class="text-gray-400">Расчет стоимости является предварительным, точную сумму вместе с доставкой, а также все детали вам расскажет менеджер.</p>
+        </div>
+    </div>
     <div class="flex justify-between mt-12 items-start mobNot">
         <div class="slameGrid w-full">
             <p class="lgText blue text-xs">Размер рулона</p>
@@ -370,6 +453,9 @@
     <div class="w-full">
         <p class="bg-dark-blue py-1 px-3 text-white w-fit lgText text-xs">Оставьте заявку</p>
         <h1 class="blue mt-3">Контакты</h1>
+        <div class="lg:hidden my-5">
+            <script class="mobNot"  type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af7bb81581e57281ba780868dec6c2ee1d483d36571c307501f967527f97254bd&amp;width=400&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+        </div>
         <div class="py-4 flex flex-col gap-6">
             <p class="text-gray-400 lgText">Офис продаж:</p>
             <div>
@@ -396,7 +482,9 @@
         </div>
         <p class="blue mb-8">Стальная Марка © 2024. Все права защищены!</p>
     </div>
-    <script class="w-full"  type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af7bb81581e57281ba780868dec6c2ee1d483d36571c307501f967527f97254bd&amp;width=700&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+    <div class="mobNot">
+        <script class="mobNot"  type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af7bb81581e57281ba780868dec6c2ee1d483d36571c307501f967527f97254bd&amp;width=700&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+    </div>
 </div>
 </body>
 </html>
