@@ -7,6 +7,7 @@ module.exports = {
         'dark-blue': '#163265',
         'light-blue2': '#2750BC',
         'light-gray2': '#ECECF2',
+        'modal': 'rgba(0,0,0,0.5)',
       }
     },
   },
