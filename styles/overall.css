@@ -6,6 +6,9 @@ a{
     font-weight: 400;
     line-height: 24px; /* 150% */
 }
+a:hover{
+    color: #2750BC;
+}
 header p{
     color: #343F53;
     font-family: customLt;
@@ -17,6 +20,9 @@ header p{
 button{
     font-family: customRg;
     font-size: 14px;
+}
+button:hover{
+    background-color: #7e7e7e;
 }
 h1{
     color: #343F53;

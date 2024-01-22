@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>document</title>
+    <style>
+        @import "styles/style.css";
+        @import "./styles/fonts.css";
+        @import "./output.css";
+        @import "./styles/overall.css";
+        @import "styles/media.css";
+    </style>
+    <script src="scripts/answrs.js"></script>
+
+</head>
+<body class="">
+<header class="flex justify-between my-0 lg:my-5 mx-0 ml-4 lg:mx-20 items-center">
+    <div class="headerLeft"><img class="w-20" src="assets/imgs/logo.png"></div>
+    <div class="headerRight flex gap-8 items-center">
+        <div class="linkRow hidden lg:flex items-center gap-8">
+            <a>Продукция</a>
+            <a>О компании</a>
+            <a>Доставка</a>
+            <a>Контакты</a>
+            <p>+7 701 399 35 38</p>
+        </div>
+        <div class="buttonRow flex items-stretch" >
+            <button class="bg-dark-blue px-4 py-3.5 text-white">
+                <svg class="block lg:hidden" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M17.2996 13.6521V15.8544C17.3004 16.0588 17.2585 16.2612 17.1766 16.4485C17.0947 16.6358 16.9746 16.804 16.8239 16.9422C16.6733 17.0804 16.4954 17.1856 16.3018 17.2511C16.1081 17.3166 15.9029 17.3409 15.6993 17.3225C13.4404 17.0771 11.2705 16.3052 9.36411 15.0689C7.59044 13.9418 6.08667 12.438 4.95961 10.6644C3.71899 8.74929 2.94693 6.5689 2.70597 4.29984C2.68763 4.09684 2.71175 3.89225 2.77681 3.69908C2.84187 3.50592 2.94644 3.32842 3.08385 3.17788C3.22127 3.02734 3.38853 2.90707 3.57497 2.82471C3.76142 2.74236 3.96297 2.69973 4.1668 2.69953H6.36905C6.72531 2.69603 7.07068 2.82218 7.3408 3.05449C7.61092 3.28679 7.78736 3.60939 7.83722 3.96216C7.93017 4.66693 8.10255 5.35893 8.35108 6.02494C8.44984 6.28769 8.47122 6.57324 8.41267 6.84777C8.35412 7.12229 8.21811 7.37428 8.02074 7.57387L7.08845 8.50615C8.13346 10.344 9.65514 11.8657 11.493 12.9107L12.4252 11.9784C12.6248 11.781 12.8768 11.645 13.1513 11.5864C13.4259 11.5279 13.7114 11.5493 13.9742 11.648C14.6402 11.8966 15.3322 12.069 16.0369 12.1619C16.3935 12.2122 16.7192 12.3918 16.952 12.6666C17.1848 12.9413 17.3085 13.2921 17.2996 13.6521Z" stroke="#FAFAFC" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="hidden lg:flex">обратный звонок</span>
+            </button>
+            <button class="p-4 bg-light-blue2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 1.20001C12.976 1.20101 15.3027 2.1603 17.0517 3.90107C18.8249 5.66624 19.8009 7.98174 19.8002 10.421C19.7991 12.8775 18.8265 15.1913 17.0613 16.9361C15.3005 18.6765 12.9702 19.6351 10.4999 19.6351H10.4962C9.0451 19.6346 7.60635 19.2923 6.31688 18.643L1.22562 19.8L2.33299 14.7715C1.59124 13.4033 1.20048 11.9043 1.2002 10.4184V10.4167V10.4139C1.20247 7.95889 2.17461 5.64212 3.93822 3.89879C5.69871 2.15845 8.02907 1.20001 10.4998 1.20001ZM10.4965 18.1834H10.4998C14.825 18.1834 18.3452 14.701 18.347 10.4205C18.3477 8.37013 17.5234 6.42005 16.0261 4.92946C14.5511 3.46158 12.5884 2.65257 10.4995 2.65172C6.17555 2.65172 2.656 6.13737 2.6533 10.4169C2.6533 11.739 3.02574 13.0795 3.73055 14.2937L3.87231 14.538L3.13696 17.8768L6.52242 17.1075L6.76318 17.238C7.90251 17.856 9.19354 18.1828 10.4965 18.1834ZM7.5618 6.35406H7.96947C8.12103 6.36031 8.28878 6.37223 8.44815 6.72501H8.44801C8.5579 6.96832 8.74169 7.42366 8.88689 7.78342C8.99168 8.04305 9.07638 8.2529 9.09871 8.29734C9.15183 8.4032 9.18735 8.52694 9.11647 8.66828C9.10185 8.69737 9.08896 8.72421 9.07678 8.74958C9.02977 8.84745 8.99332 8.92335 8.90894 9.02163C8.80255 9.14523 8.67343 9.27493 8.57784 9.36973C8.47116 9.47545 8.36037 9.59011 8.48437 9.80197C8.60852 10.014 9.04743 10.73 9.67995 11.2916C10.3631 11.8981 10.9513 12.1556 11.2477 12.2854C11.3039 12.31 11.3496 12.33 11.3835 12.3469C11.5963 12.4529 11.7204 12.4352 11.8444 12.2937C11.9686 12.1524 12.3863 11.6625 12.5282 11.4508C12.6701 11.2386 12.8119 11.274 13.0069 11.3445C13.1925 11.4119 14.1456 11.887 14.4208 12.0242C14.4348 12.0312 14.447 12.0373 14.4573 12.0424C14.4989 12.0631 14.5378 12.0818 14.5738 12.0991C14.7221 12.1703 14.8223 12.2185 14.8651 12.2895C14.9182 12.378 14.9182 12.802 14.741 13.2966C14.5637 13.7911 13.6951 14.2682 13.305 14.3034C13.2675 14.3068 13.2303 14.3112 13.1919 14.3157C12.8316 14.3579 12.3766 14.4112 10.7524 13.7735C8.75383 12.9887 7.43621 11.0438 7.16421 10.6423C7.14194 10.6094 7.12668 10.5869 7.11863 10.5762L7.11617 10.5729C7.00116 10.4199 6.25003 9.42007 6.25003 8.3856C6.25003 7.41014 6.7315 6.89878 6.95305 6.66347C6.9682 6.64738 6.98214 6.63257 6.99462 6.619C7.18951 6.40714 7.4199 6.35406 7.5618 6.35406Z" fill="#F5F5F5"/>
+                </svg>
+            </button>
+            <button class="p-4 deskNot">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M2.5 11.8H1.8V13.2H2.5V11.8ZM17.5 13.2C17.8866 13.2 18.2 12.8866 18.2 12.5C18.2 12.1134 17.8866 11.8 17.5 11.8V13.2ZM2.5 13.2H17.5V11.8H2.5V13.2Z" fill="#163265"/>
+                    <path d="M2.5 6.8C2.1134 6.8 1.8 7.1134 1.8 7.5C1.8 7.8866 2.1134 8.2 2.5 8.2V6.8ZM17.5 8.2H18.2V6.8H17.5V8.2ZM2.5 8.2H17.5V6.8H2.5V8.2Z" fill="#163265"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</header>
+<div class="  mt-12 mx-4 lg:mx-20 flex flex-row gap-6 justify-between">
+    <div class="block1sub flex flex-col gap-6">
+        <a class="" href="./index.html">
+        <button class=" bg-dark-blue text-white px-4 py-3 flex gap-8 self-start">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M12.5 4.99998L7.5 9.99998L12.5 15" stroke="#FAFAFC" stroke-width="1.75" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Смотреть Всю продукцию
+        </button></a>
+        <img class="lg:hidden" src="./assets/imgs/tovar1.png">
+        <h1 class="blue">Сетка сварная в рулонах</h1>
+        <div class="flex flex-col gap-8">
+            <p class="blue">Качественная сварная сетка, изготовленная <br class="mobNot"> из стальных проволок.</p>
+            <div class="grid grid-cols-2 gap-2">
+                <p class="text-gray-400">Металл</p>
+                <p class="blue text-end">Сталь</p>
+                <p class="text-gray-400">Размеры рулона</p>
+                <p class="blue text-end">11 вариантов</p>
+                <p class="text-gray-400">Диаметр</p>
+                <p class="blue text-end">2.7 – 5</p>
+            </div>
+            <div class="flex flex-col gap-2">
+                <p class="text-base text-gray-400">Стоимость</p>
+                <h2 class="blue text-2xl lgText">от 290 ₸ за м²</h2>
+            </div>
+            <div class=" flex flex-col lg:flex-row gap-2">
+                <button class="bg-dark-blue px-4 py-3 text-white">Оставить заявку</button>
+                <button class="bg-light-blue2 px-4 py-3 text-white flex justify-center gap-8">
+                    рассчитать стоимость
+                    <svg class="mobNot" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M5 7.49997L10 12.5L15 7.49997" stroke="#FAFAFC" stroke-width="1.75" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <img class="hidden lg:flex" src="./assets/imgs/tovar1.png">
+</div>
+<div class="mx-4 lg:mx-20">
+    <div class="mt-20 flex flex-col lg:flex-row gap-6">
+        <div class="bg-light-gray2 basis-1/3 py-12 px-6 flex flex-row lg:flex-col gap-14">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+                <g clip-path="url(#clip0_5_798)">
+                    <path d="M51.5443 17.9921L55.6963 13.8401L50.1603 8.304L46.0083 12.4561L33.5523 0L16.9445 16.6081L47.3923 47.056L64.0005 30.4481L51.5443 17.9921ZM25.2483 30.4481L1.72033 53.9762C-0.572793 56.2694 -0.572793 59.9873 1.72033 62.2803C4.01346 64.5734 7.73133 64.5734 10.0243 62.2803L33.5523 38.7523L25.2483 30.4481Z" fill="#163265"/>
+                    <path d="M51.5442 17.9921L55.6962 13.8401L50.1602 8.304L46.0082 12.4561L33.5522 0L16.9443 16.6081L47.3922 47.056L64.0003 30.4481L51.5442 17.9921Z" fill="#2750BC"/>
+                    <rect x="28.7573" y="14" width="6" height="9.18719" transform="rotate(-45 28.7573 14)" fill="#FAFAFC"/>
+                </g>
+                <defs>
+                    <clipPath id="clip0_5_798">
+                        <rect width="64" height="64" fill="white"/>
+                    </clipPath>
+                </defs>
+            </svg>
+            <div class="flex flex-col gap-2">
+                <h2 class="lgText text-blue-950 text-base lg:text-2xl">Завод-производитель</h2>
+                <p class="text-slate-400 text-sm lg:text-base">Контроль качества и лучшие цены</p>
+            </div>
+        </div>
+        <div class="bg-light-gray2 basis-1/3 py-12 px-6 flex flex-row lg:flex-col gap-14">
+            <svg xmlns="http://www.w3.org/2000/svg" width="65" height="64" viewBox="0 0 65 64" fill="none">
+                <g clip-path="url(#clip0_5_807)">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M61.967 64H3.32847C2.91605 64 2.57861 63.6626 2.57861 63.2501V42.8916C2.57861 42.4792 2.91605 42.1418 3.32847 42.1418H15.4761C15.7385 42.1418 15.9635 42.2917 16.076 42.4792L24.8493 55.4892H40.4462L49.2195 42.4792C49.3695 42.2917 49.5944 42.1418 49.8569 42.1418H61.967C62.3794 42.1418 62.7169 42.4792 62.7169 42.8916V63.2501C62.7169 63.6626 62.3794 64 61.967 64Z" fill="#163265"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M37.3717 50.5026H27.961C27.6986 50.5026 27.5111 50.3902 27.3611 50.2027L9.06472 27.5196C8.80227 27.1822 8.83977 26.6948 9.21469 26.4323L12.739 23.6954C13.0764 23.4704 13.5264 23.5079 13.7888 23.8453L29.9856 44.0164H35.3471L51.5439 23.8453C51.8064 23.5079 52.2563 23.4704 52.5937 23.6954L56.118 26.4323C56.4555 26.6948 56.5305 27.1822 56.2305 27.5196L37.9716 50.2027C37.8216 50.3902 37.5966 50.5026 37.3717 50.5026ZM48.5445 9.14821H16.7882C14.2387 9.14821 12.1766 7.12361 12.1766 4.57411V0.749854C12.1766 0.337434 12.514 0 12.9265 0H52.3688C52.7812 0 53.1186 0.337434 53.1186 0.749854V4.57411C53.1561 7.12361 51.094 9.14821 48.5445 9.14821Z" fill="#2750BC"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M48.582 14.7346H16.7132C16.3008 14.7346 15.9634 14.3972 15.9634 13.9848V8.39836C15.9634 7.42355 17.4631 7.42355 17.4631 8.39836H47.8322C47.8322 7.42355 49.3319 7.42355 49.3319 8.39836V13.9848C49.3319 14.3972 48.9944 14.7346 48.582 14.7346ZM33.51 34.9057C32.6101 34.9057 31.5978 35.0557 31.2604 34.6057L27.0612 29.0943C26.9487 28.9818 26.9112 28.8319 26.9112 28.6444V16.0094H38.4215V28.7194C38.4215 28.8694 38.3465 29.0568 38.2715 29.1693L34.1098 34.6057C33.9599 34.7932 33.7349 34.9057 33.51 34.9057Z" fill="#2750BC"/>
+                    <rect x="24.333" y="3" width="16" height="6" fill="#FAFAFC"/>
+                </g>
+                <defs>
+                    <clipPath id="clip0_5_807">
+                        <rect width="64" height="64" fill="white" transform="translate(0.666504)"/>
+                    </clipPath>
+                </defs>
+            </svg>
+            <div class="flex flex-col gap-2">
+                <h2 class="lgText text-blue-950 text-base lg:text-2xl">Большой ассортимент</h2>
+                <p class="text-slate-400 text-sm lg:text-base">Металлопродукция под любые задачи</p>
+            </div>
+        </div>
+        <div class="bg-light-gray2 basis-1/3 py-12 px-6 flex flex-row lg:flex-col gap-14">
+            <svg xmlns="http://www.w3.org/2000/svg" width="65" height="64" viewBox="0 0 65 64" fill="none">
+                <g clip-path="url(#clip0_5_817)">
+                    <path d="M40.3335 11.534V11.518L52.3095 16.882L64.3335 12.374L32.3335 0.373993L0.333496 12.374L32.3335 24.374L44.3095 19.882L32.3335 14.946V14.934L40.3335 11.534ZM0.333496 16.374V52.374L30.3335 63.626V27.626L0.333496 16.374ZM16.3335 52.506L8.3335 49.506V45.238L16.3335 48.238V52.506ZM52.3335 20.874V30.894L44.3335 33.894V23.874L34.3335 27.626V63.626L64.3335 52.374V16.374L52.3335 20.874Z" fill="#163265"/>
+                    <path d="M0.333496 52.374V16.374L30.3335 27.626V63.626L0.333496 52.374Z" fill="#2750BC"/>
+                    <path d="M8.3335 49.506L16.3335 52.506V48.238L8.3335 45.238V49.506Z" fill="#FAFAFC"/>
+                </g>
+                <defs>
+                    <clipPath id="clip0_5_817">
+                        <rect width="64" height="64" fill="white" transform="translate(0.333496)"/>
+                    </clipPath>
+                </defs>
+            </svg>
+            <div class="flex flex-col gap-2">
+                <h2 class="lgText text-blue-950 text-base lg:text-2xl">Доставка по Казахстану</h2>
+                <p class="text-slate-400 text-sm lg:text-base">По всем регионам страны </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mx-4 lg:mx-20 mt-24 flex flex-col gap-2">
+    <p class="px-4 py-1 bg-dark-blue text-white text-xs self-start">О продукции</p>
+    <h1 class="blue">Расчет стоимости</h1>
+    <div class="flex justify-between mt-12 items-start mobNot">
+        <div class="slameGrid w-full">
+            <p class="lgText blue text-xs">Размер рулона</p>
+            <p class="lgText blue text-xs">диаметр</p>
+            <p class="lgText blue text-xs">Цена за 1 м²</p>
+            <p class="lgText blue text-xs">кол-во</p>
+            <p class="lgText blue text-xs">Итого</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+            <p class="text-base blue">100x100</p>
+        </div>
+        <div class="check bg-light-gray2 py-12 px-6 flex flex-col gap-8">
+            <p class="lgText text-2xl blue">Итоговый чек</p>
+            <div class="flex flex-col gap-4">
+                <p class="blue">Продукция:</p>
+                <div class="grid grid-cols-3  gap-2">
+                    <p class="text-gray-400 text-sm">100x100 (2.7)</p>
+                    <p class="text-sm">100 шт</p>
+                    <p class="text-sm">29 000 ₸</p>
+                    <p class="text-gray-400 text-sm">100x100 (2.7)</p>
+                    <p class="text-sm">100 шт</p>
+                    <p class="text-sm">29 000 ₸</p>
+                    <p class="text-gray-400 text-sm">100x100 (2.7)</p>
+                    <p class="text-sm">100 шт</p>
+                    <p class="text-sm">29 000 ₸</p>
+                </div>
+            </div>
+            <div class="flex flex-col gap-4">
+                <p class="blue">Доставка:</p>
+                <select class="w-full py-3" name="Выберите город">
+                </select>
+                <div class="flex justify-between">
+                    <p class="text-gray-400">Стоимость</p>
+                    <p class="blue">По запросу</p>
+                </div>
+            </div>
+            <div class="flex flex-col gap-4">
+                <button class="bg-light-blue2 px-12 py-4 text-white">Оставить заявку</button>
+                <p class="text-gray-400">Расчет стоимости является предварительным, точную сумму вместе с доставкой, а также все детали вам расскажет менеджер.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mt-24 darkdark py-16 lg:py-30 px-4 lg:px-20 relative overflow-hidden">
+    <img class="absolute bottom-0 top-0 right-0 z-0 mobNot" src="assets/imgs/bg.png">
+    <p class="bg-light-blue2 py-1 px-3 text-white w-fit lgText text-xs">Оставьте заявку</p>
+    <h1 class="lgray mt-2 z-1">Получите расчет<br class="mobNot"> стоимости за 15 минут</h1>
+    <p class="text-light-gray2 mt-9">Мы посчитаем ваш объем и дадим лучшее предложение для вас.</p>
+    <div class="mt-14 flex flex-col lg:flex-row gap-4">
+        <input class="" placeholder="Имя">
+        <input class="" placeholder="+7 (   )">
+        <button class="bg-light-blue2 py-4 px-8 text-white hover:bg-gray-600">Оставить заявку</button>
+    </div>
+</div>
+<div class="mt-14 lg:mt-24 mx-4 lg:mx-20">
+    <p class="bg-dark-blue py-1 px-3 text-white w-fit text-xs">клиентам</p>
+    <h1 class="blue mt-4">Доставка по РК</h1>
+    <div class="flex justify-between">
+        <div class="mt-12 flex flex-col">
+            <div class="text-gray-400">
+                Мы осуществляем стандартную доставку в следующие <br class="mobNot">города: <span class="textBolder blue">Астана, Шымкент, Атырау, Алматы, Караганда, <br class="mobNot">Кызылорда, Семей, Усть-Каменогорск.</span>
+                <br><br>
+                Если, вам необходимо сделать доставку в другой город – <br class="mobNot"><span class="textBolder blue">свяжитесь с нами, мы найдем способ доставить продукцию <br class="mobNot">к вам.</span>
+                <br><br>
+                Для расчета цены и стоимости свяжитесь с нашим <br class="mobNot">менеждером.
+            </div>
+            <button class="bg-light-blue2 text-white py-3 px-12 mt-12 lg:self-start">Связаться с нами</button>
+        </div>
+        <img class="mapPic mobNot" src="./assets/imgs/map.png">
+
+    </div>
+</div>
+<div class="mt-14 lg:mt-24 mx-4 lg:mx-20">
+    <p class="bg-dark-blue py-1 px-3 text-white w-fit text-xs">клиентам</p>
+    <h1 class="blue mt-4">Вопросы и ответы</h1>
+    <div id="openButton1" class="mt-16 py-8 px-4 borderTop">
+        <div class="flex justify-between items-center">
+            <h2 class="text-2xl lgText blue">Производства какой страны ваша продукция?</h2>
+            <svg id="closeButton1" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="#2750BC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg id="QopenButton1" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <path d="M14.0002 5.8335V22.1668M5.8335 14.0002H22.1668" stroke="#2750BC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+
+        <p class="text-gray-400" id="openText1">Мы являемся заводом-производителем металлопродукции уже более 12 лет на рынке <br class="mobNot">Казахстана и СНГ. Мы зарекомендовали себя как надежного и успешного поставщика. </p>
+    </div>
+
+    <div id="openButton2" class="py-8 px-4 borderTop ">
+        <div class="flex justify-between items-center">
+            <h2 class="text-2xl lgText blue">Как мне сделать заказ?</h2>
+            <svg id="closeButton2" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="#2750BC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg id="QopenButton2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <path d="M14.0002 5.8335V22.1668M5.8335 14.0002H22.1668" stroke="#2750BC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+
+        <p class="text-gray-400" id="openText2">Мы являемся заводом-производителем металлопродукции уже более 12 лет на рынке <br class="mobNot">Казахстана и СНГ. Мы зарекомендовали себя как надежного и успешного поставщика. </p>
+    </div>
+
+    <div id="openButton3" class="py-8 px-4 borderTop ">
+        <div class="flex justify-between items-center">
+            <h2 class="text-2xl lgText blue">Вы даете гарантию на качество и долговечность продукции?</h2>
+            <svg id="closeButton3" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="#2750BC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg id="QopenButton3" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <path d="M14.0002 5.8335V22.1668M5.8335 14.0002H22.1668" stroke="#2750BC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+
+        <p class="text-gray-400" id="openText3">Мы являемся заводом-производителем металлопродукции уже более 12 лет на рынке <br class="mobNot">Казахстана и СНГ. Мы зарекомендовали себя как надежного и успешного поставщика. </p>
+    </div>
+
+    <div id="openButton4" class="py-8 px-4 borderTop ">
+        <div class="flex justify-between items-center">
+            <h2 class="text-2xl lgText blue">Можете ли вы сделать индивидуальный заказ по моим размерам?</h2>
+            <svg id="closeButton4" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="#2750BC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg id="QopenButton4" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <path d="M14.0002 5.8335V22.1668M5.8335 14.0002H22.1668" stroke="#2750BC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+
+        <p class="text-gray-400" id="openText4">Мы являемся заводом-производителем металлопродукции уже более 12 лет на рынке <br class="mobNot">Казахстана и СНГ. Мы зарекомендовали себя как надежного и успешного поставщика. </p>
+    </div>
+
+    <div id="openButton5" class="py-8 px-4 borderTop ">
+        <div class="flex justify-between items-center">
+            <h2 class="text-2xl lgText blue">Можно ли увидеть продукцию вживую?</h2>
+            <svg id="closeButton5" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="#2750BC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg id="QopenButton5" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <path d="M14.0002 5.8335V22.1668M5.8335 14.0002H22.1668" stroke="#2750BC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+
+        <p class="text-gray-400" id="openText5">Мы являемся заводом-производителем металлопродукции уже более 12 лет на рынке <br class="mobNot">Казахстана и СНГ. Мы зарекомендовали себя как надежного и успешного поставщика. </p>
+    </div>
+
+    <div id="openButton6" class="py-8 px-4 borderTop borderBottom">
+        <div class="flex justify-between items-center">
+            <h2 class="text-2xl lgText blue">Вы делаете доставку за пределами РК?</h2>
+            <svg id="closeButton6" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="#2750BC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg id="QopenButton6" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <path d="M14.0002 5.8335V22.1668M5.8335 14.0002H22.1668" stroke="#2750BC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+
+        <p class="text-gray-400" id="openText6">Мы являемся заводом-производителем металлопродукции уже более 12 лет на рынке <br class="mobNot">Казахстана и СНГ. Мы зарекомендовали себя как надежного и успешного поставщика. </p>
+    </div>
+
+
+
+</div>
+<div class="darkdark mt-14 lg:mt-24 py-16 lg:py-32 px-4 flex flex-col items-stretch lg:items-center">
+    <p class="bg-light-blue2 py-1 px-3 text-white w-fit lgText text-xs">Оставьте заявку</p>
+    <h1 class="lgray mt-4">Остались вопросы?</h1>
+    <p class="lgray mt-9">Оставьте ваши данные, мы позвоним вам и подберем лучшее предложение для вас.</p>
+    <div class="mt-14 flex flex-col items-stretch lg:flex-row gap-4">
+        <input class="" placeholder="Имя">
+        <input class="" placeholder="+7 (   )">
+        <button class="bg-light-blue2 px-8 py-3 text-white">Оставить заявку</button>
+    </div>
+</div>
+<div class="mx-4 lg:mx-20 mt-14 lg:mt-24 flex flex-col-reverse lg:flex-row justify-between">
+    <div class="w-full">
+        <p class="bg-dark-blue py-1 px-3 text-white w-fit lgText text-xs">Оставьте заявку</p>
+        <h1 class="blue mt-3">Контакты</h1>
+        <div class="py-4 flex flex-col gap-6">
+            <p class="text-gray-400 lgText">Офис продаж:</p>
+            <div>
+                <p class="blue text-2xl">Алматы, ул. Тимирязева, 42 корпус 22</p>
+                <p class="text-3xl textBolder mt-3">+7 705 755 52 77</p>
+            </div>
+            <p class="text-gray-400 textBolder">Ежедневно 9:00 — 21:00</p>
+            <p class="text-gray-400 lgText">Адрес производства:</p>
+            <p class="blue text-2xl">Алматы, ул. Казыбаева, 286</p>
+        </div>
+        <div class="buttonRow flex flex-col lg:flex-row w-full items-stretch gap-2 py-4" >
+            <button class="bg-dark-blue px-4 py-3.5 text-white flex justify-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M12.4995 3.33333V7.5M12.4995 7.5L16.6662 7.5M12.4995 7.5L17.4995 2.5M8.52204 11.5526C7.52072 10.5512 6.73007 9.41904 6.15007 8.21102C6.10018 8.10712 6.07523 8.05516 6.05607 7.98942C5.98797 7.75579 6.03688 7.46891 6.17856 7.27105C6.21843 7.21537 6.26606 7.16774 6.36132 7.07248C6.65266 6.78115 6.79833 6.63548 6.89356 6.48899C7.25273 5.93659 7.25273 5.22443 6.89356 4.67203C6.79833 4.52554 6.65266 4.37988 6.36132 4.08854L6.19893 3.92615C5.75606 3.48328 5.53462 3.26184 5.29681 3.14156C4.82384 2.90233 4.26529 2.90233 3.79232 3.14156C3.5545 3.26184 3.33307 3.48328 2.8902 3.92615L2.75883 4.05751C2.31748 4.49886 2.09681 4.71954 1.92827 5.01956C1.74125 5.35249 1.60678 5.86956 1.60792 6.25141C1.60894 6.59554 1.67569 6.83072 1.8092 7.30109C2.52668 9.82892 3.8804 12.2142 5.87039 14.2042C7.86037 16.1942 10.2457 17.5479 12.7735 18.2654C13.2439 18.3989 13.4791 18.4657 13.8232 18.4667C14.205 18.4678 14.7221 18.3333 15.055 18.1463C15.3551 17.9778 15.5757 17.7571 16.0171 17.3158L16.1484 17.1844C16.5913 16.7415 16.8127 16.5201 16.933 16.2823C17.1723 15.8093 17.1723 15.2508 16.933 14.7778C16.8127 14.54 16.5913 14.3185 16.1484 13.8757L15.9861 13.7133C15.6947 13.4219 15.549 13.2763 15.4026 13.181C14.8502 12.8219 14.138 12.8219 13.5856 13.181C13.4391 13.2763 13.2934 13.4219 13.0021 13.7133C12.9068 13.8085 12.8592 13.8562 12.8035 13.896C12.6057 14.0377 12.3188 14.0866 12.0852 14.0185C12.0194 13.9994 11.9675 13.9744 11.8636 13.9245C10.6556 13.3445 9.52335 12.5539 8.52204 11.5526Z" stroke="white" stroke-width="1.64" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                обратный звонок
+            </button>
+            <button class="p-4 bg-light-blue2 text-white flex justify-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 1.20001C12.976 1.20101 15.3027 2.1603 17.0517 3.90107C18.8249 5.66624 19.8009 7.98174 19.8002 10.421C19.7991 12.8775 18.8265 15.1913 17.0613 16.9361C15.3005 18.6765 12.9702 19.6351 10.4999 19.6351H10.4962C9.0451 19.6346 7.60635 19.2923 6.31688 18.643L1.22562 19.8L2.33299 14.7715C1.59124 13.4033 1.20048 11.9043 1.2002 10.4184V10.4167V10.4139C1.20247 7.95889 2.17461 5.64212 3.93822 3.89879C5.69871 2.15845 8.02907 1.20001 10.4998 1.20001ZM10.4965 18.1834H10.4998C14.825 18.1834 18.3452 14.701 18.347 10.4205C18.3477 8.37013 17.5234 6.42005 16.0261 4.92946C14.5511 3.46158 12.5884 2.65257 10.4995 2.65172C6.17555 2.65172 2.656 6.13737 2.6533 10.4169C2.6533 11.739 3.02574 13.0795 3.73055 14.2937L3.87231 14.538L3.13696 17.8768L6.52242 17.1075L6.76318 17.238C7.90251 17.856 9.19354 18.1828 10.4965 18.1834ZM7.5618 6.35406H7.96947C8.12103 6.36031 8.28878 6.37223 8.44815 6.72501H8.44801C8.5579 6.96832 8.74169 7.42366 8.88689 7.78342C8.99168 8.04305 9.07638 8.2529 9.09871 8.29734C9.15183 8.4032 9.18735 8.52694 9.11647 8.66828C9.10185 8.69737 9.08896 8.72421 9.07678 8.74958C9.02977 8.84745 8.99332 8.92335 8.90894 9.02163C8.80255 9.14523 8.67343 9.27493 8.57784 9.36973C8.47116 9.47545 8.36037 9.59011 8.48437 9.80197C8.60852 10.014 9.04743 10.73 9.67995 11.2916C10.3631 11.8981 10.9513 12.1556 11.2477 12.2854C11.3039 12.31 11.3496 12.33 11.3835 12.3469C11.5963 12.4529 11.7204 12.4352 11.8444 12.2937C11.9686 12.1524 12.3863 11.6625 12.5282 11.4508C12.6701 11.2386 12.8119 11.274 13.0069 11.3445C13.1925 11.4119 14.1456 11.887 14.4208 12.0242C14.4348 12.0312 14.447 12.0373 14.4573 12.0424C14.4989 12.0631 14.5378 12.0818 14.5738 12.0991C14.7221 12.1703 14.8223 12.2185 14.8651 12.2895C14.9182 12.378 14.9182 12.802 14.741 13.2966C14.5637 13.7911 13.6951 14.2682 13.305 14.3034C13.2675 14.3068 13.2303 14.3112 13.1919 14.3157C12.8316 14.3579 12.3766 14.4112 10.7524 13.7735C8.75383 12.9887 7.43621 11.0438 7.16421 10.6423C7.14194 10.6094 7.12668 10.5869 7.11863 10.5762L7.11617 10.5729C7.00116 10.4199 6.25003 9.42007 6.25003 8.3856C6.25003 7.41014 6.7315 6.89878 6.95305 6.66347C6.9682 6.64738 6.98214 6.63257 6.99462 6.619C7.18951 6.40714 7.4199 6.35406 7.5618 6.35406Z" fill="#F5F5F5"/>
+                </svg>
+                Написать в WhatsApp
+            </button>
+        </div>
+        <p class="blue mb-8">Стальная Марка © 2024. Все права защищены!</p>
+    </div>
+    <script class="w-full"  type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af7bb81581e57281ba780868dec6c2ee1d483d36571c307501f967527f97254bd&amp;width=700&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+</div>
+</body>
+</html>
