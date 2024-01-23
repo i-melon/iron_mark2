@@ -18,8 +18,8 @@
 </head>
 <body class="">
 <div id="modalWrapper" class="fixed w-full h-full bg-modal top-0 left-0 z-4 flex justify-center items-center">
-    <div class="bg-white py-16 px-12 w-1/4 flex flex-col gap-8 relative items-stretch ">
-        <button class="absolute top-4 right-4">
+    <div class="modalContent bg-white py-16 px-12 flex flex-col gap-8 relative items-stretch ">
+        <button id="closeModal" class="absolute top-4 right-4">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.3565 4.35653C4.71188 4.00115 5.28806 4.00115 5.64343 4.35653L9.99997 8.71306L14.3565 4.35653C14.7119 4.00115 15.2881 4.00115 15.6434 4.35653C15.9988 4.71191 15.9988 5.28809 15.6434 5.64346L11.2869 10L15.6434 14.3565C15.9988 14.7119 15.9988 15.2881 15.6434 15.6435C15.2881 15.9988 14.7119 15.9988 14.3565 15.6435L9.99997 11.2869L5.64343 15.6435C5.28806 15.9988 4.71188 15.9988 4.3565 15.6435C4.00112 15.2881 4.00112 14.7119 4.3565 14.3565L8.71303 10L4.3565 5.64346C4.00112 5.28809 4.00112 4.71191 4.3565 4.35653Z" fill="#2750BC"/>
             </svg>
@@ -37,10 +37,10 @@
         <div class="headerLeft"><img class="w-20" src="assets/imgs/logo.png"></div>
         <div class="headerRight flex gap-8 items-center">
             <div class="linkRow hidden lg:flex items-center gap-8">
-                <a>Продукция</a>
-                <a>О компании</a>
-                <a>Доставка</a>
-                <a>Контакты</a>
+                <a href="#products">Продукция</a>
+                <a href="#about">О компании</a>
+                <a href="#transport">Доставка</a>
+                <a href="#contacts">Контакты</a>
                 <p>+7 701 399 35 38</p>
             </div>
             <div class="buttonRow flex items-stretch" >
@@ -69,16 +69,16 @@
             <h1 class="blue">Металлопрокат <br class="mobNot">от завода-<br class="mobNot">производителя <br class="mobNot">с доставкой по РК</h1>
             <div class="self-stretch lg:self-end flex flex-col gap-8 mt-8 lg:mt-0">
                 <p class="text-slate-400">
-                    <span class="textBolder text-blue-950">Сварные сетки, профлисты, колючие <br> проволки</span> и другая продукция высочайшего <br>качества. Собственное производство <br>с контролем качества.
+                    <span class="textBolder text-blue-950 lg:text-lg">Сварные сетки, профлисты, колючие <br> проволки</span> и другая продукция высочайшего <br>качества. Собственное производство <br>с контролем качества.
                 </p>
                 <div class="flex flex-col lg:flex-row gap-2 text-white lgText">
-                    <button class="bg-dark-blue py-4 px-12 flex justify-center">Оставить заявку</button>
-                    <button class="bg-light-blue2 py-4 px-12 flex items-center gap-2 justify-center">
+                    <button id="modal2" class="bg-dark-blue py-4 px-12 flex justify-center items-center">Оставить заявку</button>
+                    <a class="text-white hover:text-white" href="#products"><button class="bg-light-blue2 py-4 px-12 flex items-center gap-2 justify-center">
                         Каталог продукции
                         <svg class="mobNot" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                             <path d="M5 7.49997L10 12.5L15 7.49997" stroke="#FAFAFC" stroke-width="1.75" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                    </button>
+                    </button></a>
                 </div>
             </div>
         </div>
@@ -116,7 +116,7 @@
                     </defs>
                 </svg>
                 <div class="flex flex-col gap-2">
-                    <h2 class="lgText text-blue-950 text-base lg:text-2xl">Большой ассортимент</h2>
+                    <h2 class="lgText text-blue-950 text-base lg:text-xl">Большой ассортимент</h2>
                     <p class="text-slate-400 text-sm lg:text-base">Металлопродукция под любые задачи</p>
                 </div>
             </div>
@@ -141,6 +141,7 @@
         </div>
     </div>
     <div class="mt-14 lg:mt-32 mx-4 lg:mx-20">
+        <a name="products"></a>
         <p class="bg-dark-blue py-1 px-3 text-white w-fit lgText text-xs">продукция</p>
         <h1 class="blue mt-2">Каталог продукции</h1>
         <div class="flex flex-col lg:grid grid-cols-3 mt-16 gap-6">
@@ -160,7 +161,7 @@
                     <h2 class="text-2xl blue lgText">от 290 ₸ за м²</h2>
                 </div>
                 <div class="flex flex-col gap-1.5">
-                    <button class="bg-dark-blue text-white py-3">оставить заявку</button>
+                    <button id="modal3" class="bg-dark-blue text-white py-3">оставить заявку</button>
                     <a class="flex flex-col" href="./setka.html"><button class="bg-light-blue2 text-white py-3">Подробнее</button></a>
                 </div>
             </div>
@@ -180,7 +181,7 @@
                     <h2 class="text-2xl blue lgText">от 290 ₸ за м²</h2>
                 </div>
                 <div class="flex flex-col gap-1.5">
-                    <button class="bg-dark-blue text-white py-3">оставить заявку</button>
+                    <button id="modal4" class="bg-dark-blue text-white py-3">оставить заявку</button>
                     <a class="flex flex-col" href="./setka.html"><button class="bg-light-blue2 text-white py-3">Подробнее</button></a>
                 </div>
             </div>
@@ -200,7 +201,7 @@
                     <h2 class="text-2xl blue lgText">от 290 ₸ за м²</h2>
                 </div>
                 <div class="flex flex-col gap-1.5">
-                    <button class="bg-dark-blue text-white py-3">оставить заявку</button>
+                    <button id="modal5" class="bg-dark-blue text-white py-3">оставить заявку</button>
                     <a class="flex flex-col" href="./setka.html"><button class="bg-light-blue2 text-white py-3">Подробнее</button></a>
                 </div>
             </div>
@@ -220,7 +221,7 @@
                     <h2 class="text-2xl blue lgText">от 290 ₸ за м²</h2>
                 </div>
                 <div class="flex flex-col gap-1.5">
-                    <button class="bg-dark-blue text-white py-3">оставить заявку</button>
+                    <button id="modal6" class="bg-dark-blue text-white py-3">оставить заявку</button>
                     <a class="flex flex-col" href="./setka.html"><button class="bg-light-blue2 text-white py-3">Подробнее</button></a>
                 </div>
             </div>
@@ -240,7 +241,7 @@
                     <h2 class="text-2xl blue lgText">от 290 ₸ за м²</h2>
                 </div>
                 <div class="flex flex-col gap-1.5">
-                    <button class="bg-dark-blue text-white py-3">оставить заявку</button>
+                    <button id="modal7" class="bg-dark-blue text-white py-3">оставить заявку</button>
                     <a class="flex flex-col" href="./setka.html"><button class="bg-light-blue2 text-white py-3">Подробнее</button></a>
                 </div>
             </div>
@@ -260,7 +261,7 @@
                     <h2 class="text-2xl blue lgText">от 290 ₸ за м²</h2>
                 </div>
                 <div class="flex flex-col gap-1.5">
-                    <button class="bg-dark-blue text-white py-3">оставить заявку</button>
+                    <button id="modal8" class="bg-dark-blue text-white py-3">оставить заявку</button>
                     <a class="flex flex-col" href="./setka.html"><button class="bg-light-blue2 text-white py-3">Подробнее</button></a>
                 </div>
             </div>
@@ -279,6 +280,7 @@
         </div>
     </div>
     <div class="mt-14 lg:mt-24 mx-4 lg:mx-20">
+        <a name="about"></a>
         <div class="flex gap-12">
             <img class="self-start mt-12 mobNot" src="assets/imgs/logo.png">
             <div>
@@ -290,7 +292,7 @@
         <div class="mt-6 lg:mt-24 flex flex-col-reverse lg:flex-row justify-between">
             <div class=" mt-8 lg:mt-0 flex flex-col gap-10 items-start">
                 <p class="blue">Мы являемся заводом-производителем <br>металлопродукции уже более 12 лет на рынке <br>Казахстана и СНГ. Мы зарекомендовали себя как <br>надежного и успешного поставщика. </p>
-                <button class="bg-light-blue2 text-white px-12 py-4 self-stretch lg:self-start">начать сотрудничество</button>
+                <button id="modal9" class="bg-light-blue2 text-white px-12 py-4 self-stretch lg:self-start">начать сотрудничество</button>
             </div>
             <div class="flex flex-col lg:flex-row gap-4 lg:gap-16">
                 <div class="flex flex-col gap-2">
@@ -314,15 +316,15 @@
             <p class="blue self-stretch lg:self-end mt-4 lg:mt-0">Наши клиенты и партнеры - крупные компании, <br class="mobNot">которые убедились в качестве нашей работы и <br class="mobNot">сотрудничают с нами уже несколько лет.</p>
         </div>
         <div class="grid grid-cols-2 lg:grid-cols-3 mt-16 gap-12">
-            <div class="flex justify-center items-center"><img src="assets/imgs/lg1.png"></div>
-            <div class="flex justify-center items-center"><img src="assets/imgs/image%205.png"></div>
-            <div class="flex justify-center items-center"><img src="assets/imgs/image%206.png"></div>
-            <div class="flex justify-center items-center"><img src="assets/imgs/image%207.png"></div>
-            <div class="flex justify-center items-center"><img src="assets/imgs/image%208.png"></div>
-            <div class="flex justify-center items-center"><img src="assets/imgs/image%209.png"></div>
-            <div class="flex justify-center items-center"><img src="assets/imgs/image%2010.png"></div>
-            <div class="flex justify-center items-center"><img src="assets/imgs/image%207-1.png"></div>
-            <div class="flex justify-center items-center"><img src="assets/imgs/image%2011.png"></div>
+            <div class="flex justify-center items-center"><img class="gridImg" src="assets/imgs/lg1.png"></div>
+            <div class="flex justify-center items-center"><img class="gridImg2" src="assets/imgs/image%205.png"></div>
+            <div class="flex justify-center items-center"><img class="gridImg3" src="assets/imgs/image%206.png"></div>
+            <div class="flex justify-center items-center"><img class="gridImg4" src="assets/imgs/image%207.png"></div>
+            <div class="flex justify-center items-center"><img class="gridImg5" src="assets/imgs/image%208.png"></div>
+            <div class="flex justify-center items-center"><img class="gridImg6" src="assets/imgs/image%209.png"></div>
+            <div class="flex justify-center items-center"><img class="gridImg7" src="assets/imgs/image%2010.png"></div>
+            <div class="flex justify-center items-center"><img class="gridImg8" src="assets/imgs/image%207-1.png"></div>
+            <div class="flex justify-center items-center"><img class="gridImg9" src="assets/imgs/image%2011.png"></div>
         </div>
     </div>
     <div class="mt-24 darkdark py-16 lg:py-30 px-4 lg:px-20 relative overflow-hidden">
@@ -337,6 +339,7 @@
         </div>
     </div>
     <div class="mt-14 lg:mt-24 mx-4 lg:mx-20">
+        <a name="transport"></a>
         <p class="bg-dark-blue py-1 px-3 text-white w-fit text-xs">клиентам</p>
         <h1 class="blue mt-4">Доставка по РК</h1>
         <div class="flex justify-between">
@@ -348,7 +351,7 @@
                     <br><br>
                     Для расчета цены и стоимости свяжитесь с нашим <br class="mobNot">менеждером.
                 </div>
-                <button class="bg-light-blue2 text-white py-3 px-12 mt-12 lg:self-start">Связаться с нами</button>
+                <button id="modal10" class="bg-light-blue2 text-white py-3 px-12 mt-12 lg:self-start">Связаться с нами</button>
             </div>
             <img class="mapPic mobNot" src="./assets/imgs/map.png">
 
@@ -455,6 +458,7 @@
         </div>
     </div>
     <div class="mx-4 lg:mx-20 mt-14 lg:mt-24 flex flex-col-reverse lg:flex-row justify-between">
+        <a name="contacts"></a>
         <div class="w-full">
             <p class="bg-dark-blue py-1 px-3 text-white w-fit lgText text-xs">Оставьте заявку</p>
             <h1 class="blue mt-3">Контакты</h1>
@@ -472,7 +476,7 @@
                 <p class="blue text-2xl">Алматы, ул. Казыбаева, 286</p>
             </div>
             <div class="buttonRow flex flex-col lg:flex-row w-full items-stretch gap-2 py-4" >
-                <button class="bg-dark-blue px-4 py-3.5 text-white flex justify-center gap-2">
+                <button id="modal11" class="bg-dark-blue px-4 py-3.5 text-white flex justify-center items-center gap-2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <path d="M12.4995 3.33333V7.5M12.4995 7.5L16.6662 7.5M12.4995 7.5L17.4995 2.5M8.52204 11.5526C7.52072 10.5512 6.73007 9.41904 6.15007 8.21102C6.10018 8.10712 6.07523 8.05516 6.05607 7.98942C5.98797 7.75579 6.03688 7.46891 6.17856 7.27105C6.21843 7.21537 6.26606 7.16774 6.36132 7.07248C6.65266 6.78115 6.79833 6.63548 6.89356 6.48899C7.25273 5.93659 7.25273 5.22443 6.89356 4.67203C6.79833 4.52554 6.65266 4.37988 6.36132 4.08854L6.19893 3.92615C5.75606 3.48328 5.53462 3.26184 5.29681 3.14156C4.82384 2.90233 4.26529 2.90233 3.79232 3.14156C3.5545 3.26184 3.33307 3.48328 2.8902 3.92615L2.75883 4.05751C2.31748 4.49886 2.09681 4.71954 1.92827 5.01956C1.74125 5.35249 1.60678 5.86956 1.60792 6.25141C1.60894 6.59554 1.67569 6.83072 1.8092 7.30109C2.52668 9.82892 3.8804 12.2142 5.87039 14.2042C7.86037 16.1942 10.2457 17.5479 12.7735 18.2654C13.2439 18.3989 13.4791 18.4657 13.8232 18.4667C14.205 18.4678 14.7221 18.3333 15.055 18.1463C15.3551 17.9778 15.5757 17.7571 16.0171 17.3158L16.1484 17.1844C16.5913 16.7415 16.8127 16.5201 16.933 16.2823C17.1723 15.8093 17.1723 15.2508 16.933 14.7778C16.8127 14.54 16.5913 14.3185 16.1484 13.8757L15.9861 13.7133C15.6947 13.4219 15.549 13.2763 15.4026 13.181C14.8502 12.8219 14.138 12.8219 13.5856 13.181C13.4391 13.2763 13.2934 13.4219 13.0021 13.7133C12.9068 13.8085 12.8592 13.8562 12.8035 13.896C12.6057 14.0377 12.3188 14.0866 12.0852 14.0185C12.0194 13.9994 11.9675 13.9744 11.8636 13.9245C10.6556 13.3445 9.52335 12.5539 8.52204 11.5526Z" stroke="white" stroke-width="1.64" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
