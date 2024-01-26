@@ -17,3 +17,12 @@
 body{font-family: customLt}
 .lgText{font-family: customRg}
 .textBolder{font-family: customBd}
+
+.f18{
+    font-size: 18px;
+    line-height: 24px;
+}
+.f18{
+    font-size: 20px;
+    line-height: 24px;
+}
