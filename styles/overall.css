@@ -8,7 +8,7 @@ a{
     cursor: pointer;
 }
 a:hover{
-    color: #2750BC;
+    color: #274882;;
 }
 header p{
     color: #343F53;
@@ -22,9 +22,13 @@ button{
     font-family: customRg;
     font-size: 11px;
     text-transform: uppercase;
+    transition: all ease 0.2s;
 }
-button:hover{
-    background-color: #7e7e7e;
+.bg-dark-blue:hover{
+    background-color: #274882;
+}
+.bg-light-blue2:hover{
+    background-color: #3E6ADA;;
 }
 #closeModal:hover{
     background:none;
@@ -56,4 +60,14 @@ input{
 }
 .borderBottom{
     border-bottom: 1px solid rgba(16, 56, 92, 0.12);
+}
+.z-0{
+    z-index: 1;
+}
+.z2{
+    z-index: 2;
+    position: relative;
+}
+.-right-12{
+    right: -100px;
 }

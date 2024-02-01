@@ -4,8 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>document</title>
+    <title>Стальная марка</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon.ico">
     <style>
+        @import "./styles/owl.carousel.min.css";
+        @import "./styles/owl.theme.default.min.css";
         @import "styles/style.css";
         @import "./styles/fonts.css";
         @import "./output.css";
@@ -144,10 +147,10 @@
         <a name="products"></a>
         <p class="bg-dark-blue py-1 px-3 text-white w-fit lgText text-xs">продукция</p>
         <h1 class="blue mt-2">Каталог продукции</h1>
-        <div class="flex flex-col lg:grid grid-cols-3 mt-16 gap-6">
+        <div class="hidden lg:grid grid-cols-3 grid-rows-2 mt-16 gap-6">
             <div class="flex flex-col gap-6 p-5">
                 <a class="flex flex-col" href="./setka.html"><img class="w-" src="assets/imgs/tovar1.png"></a>
-                <h2 class="text-2xl blue lgText">Сетка сварная в рулонах</h2>
+                <h2 class="text-lg blue lgText">Сетка сварная в рулонах</h2>
                 <div class="grid grid-cols-2">
                     <p class="text-slate-400">Металл</p>
                     <p class="text-end">Сталь</p>
@@ -155,10 +158,6 @@
                     <p class="text-end">11 вариантов</p>
                     <p class="text-slate-400">Диаметр</p>
                     <p class="text-end">2.7 – 5</p>
-                </div>
-                <div class="flex flex-col gap-2">
-                    <p class="text-slate-400">Стоимость</p>
-                    <h2 class="text-2xl blue lgText">от 290 ₸ за м²</h2>
                 </div>
                 <div class="flex flex-col gap-1.5">
                     <button id="modal3" class="bg-dark-blue text-white py-3">оставить заявку</button>
@@ -167,7 +166,7 @@
             </div>
             <div class="flex flex-col gap-6 p-5">
                 <a class="flex flex-col" href="./setka.html"><img class="w-" src="assets/imgs/tovar2.png"></a>
-                <h2 class="text-2xl blue lgText">Сетка сварная в рулонах</h2>
+                <h2 class="text-lg blue lgText">Сетка сварная в листах</h2>
                 <div class="grid grid-cols-2">
                     <p class="text-slate-400">Металл</p>
                     <p class="text-end">Сталь</p>
@@ -175,10 +174,6 @@
                     <p class="text-end">11 вариантов</p>
                     <p class="text-slate-400">Диаметр</p>
                     <p class="text-end">2.7 – 5</p>
-                </div>
-                <div class="flex flex-col gap-2">
-                    <p class="text-slate-400">Стоимость</p>
-                    <h2 class="text-2xl blue lgText">от 290 ₸ за м²</h2>
                 </div>
                 <div class="flex flex-col gap-1.5">
                     <button id="modal4" class="bg-dark-blue text-white py-3">оставить заявку</button>
@@ -187,7 +182,7 @@
             </div>
             <div class="flex flex-col gap-6 p-5">
                 <a class="flex flex-col" href="./setka.html"><img class="w-" src="assets/imgs/tovar3.png"></a>
-                <h2 class="text-2xl blue lgText">Сетка сварная в рулонах</h2>
+                <h2 class="text-lg blue lgText">Профлист оцинкованный НС21</h2>
                 <div class="grid grid-cols-2">
                     <p class="text-slate-400">Металл</p>
                     <p class="text-end">Сталь</p>
@@ -195,10 +190,6 @@
                     <p class="text-end">11 вариантов</p>
                     <p class="text-slate-400">Диаметр</p>
                     <p class="text-end">2.7 – 5</p>
-                </div>
-                <div class="flex flex-col gap-2">
-                    <p class="text-slate-400">Стоимость</p>
-                    <h2 class="text-2xl blue lgText">от 290 ₸ за м²</h2>
                 </div>
                 <div class="flex flex-col gap-1.5">
                     <button id="modal5" class="bg-dark-blue text-white py-3">оставить заявку</button>
@@ -207,7 +198,7 @@
             </div>
             <div class="flex flex-col gap-6 p-5">
                 <a class="flex flex-col" href="./setka.html"><img class="w-" src="assets/imgs/tovar3.png"></a>
-                <h2 class="text-2xl blue lgText">Сетка сварная в рулонах</h2>
+                <h2 class="text-lg blue lgText">Профлист оцинкованный НС35</h2>
                 <div class="grid grid-cols-2">
                     <p class="text-slate-400">Металл</p>
                     <p class="text-end">Сталь</p>
@@ -215,10 +206,6 @@
                     <p class="text-end">11 вариантов</p>
                     <p class="text-slate-400">Диаметр</p>
                     <p class="text-end">2.7 – 5</p>
-                </div>
-                <div class="flex flex-col gap-2">
-                    <p class="text-slate-400">Стоимость</p>
-                    <h2 class="text-2xl blue lgText">от 290 ₸ за м²</h2>
                 </div>
                 <div class="flex flex-col gap-1.5">
                     <button id="modal6" class="bg-dark-blue text-white py-3">оставить заявку</button>
@@ -227,7 +214,7 @@
             </div>
             <div class="flex flex-col gap-6 p-5">
                 <a class="flex flex-col" href="./setka.html"><img class="w-" src="assets/imgs/tovar5.png"></a>
-                <h2 class="text-2xl blue lgText">Сетка сварная в рулонах</h2>
+                <h2 class="text-lg blue lgText">Сетка рабица</h2>
                 <div class="grid grid-cols-2">
                     <p class="text-slate-400">Металл</p>
                     <p class="text-end">Сталь</p>
@@ -235,10 +222,6 @@
                     <p class="text-end">11 вариантов</p>
                     <p class="text-slate-400">Диаметр</p>
                     <p class="text-end">2.7 – 5</p>
-                </div>
-                <div class="flex flex-col gap-2">
-                    <p class="text-slate-400">Стоимость</p>
-                    <h2 class="text-2xl blue lgText">от 290 ₸ за м²</h2>
                 </div>
                 <div class="flex flex-col gap-1.5">
                     <button id="modal7" class="bg-dark-blue text-white py-3">оставить заявку</button>
@@ -247,7 +230,7 @@
             </div>
             <div class="flex flex-col gap-6 p-5">
                 <a class="flex flex-col" href="./setka.html"><img class="w-" src="assets/imgs/tovar6.png"></a>
-                <h2 class="text-2xl blue lgText">Сетка сварная в рулонах</h2>
+                <h2 class="text-lg blue lgText">Колючая проволока</h2>
                 <div class="grid grid-cols-2">
                     <p class="text-slate-400">Металл</p>
                     <p class="text-end">Сталь</p>
@@ -256,31 +239,140 @@
                     <p class="text-slate-400">Диаметр</p>
                     <p class="text-end">2.7 – 5</p>
                 </div>
-                <div class="flex flex-col gap-2">
-                    <p class="text-slate-400">Стоимость</p>
-                    <h2 class="text-2xl blue lgText">от 290 ₸ за м²</h2>
-                </div>
                 <div class="flex flex-col gap-1.5">
                     <button id="modal8" class="bg-dark-blue text-white py-3">оставить заявку</button>
                     <a class="flex flex-col" href="./setka.html"><button class="bg-light-blue2 text-white py-3">Подробнее</button></a>
                 </div>
             </div>
         </div>
-
-    </div>
-    <div class="znot mt-24 darkdark py-16 lg:py-30 px-4 lg:px-20 relative overflow-hidden">
-        <img class=" absolute bottom-0 top-0 right-0 z-0 mobNot" src="assets/imgs/bg.png">
-        <div id="z3">
-            <p class="bg-light-blue2 py-1 px-3 text-white w-fit lgText text-xs">Оставьте заявку</p>
-            <h1 class="lgray mt-2 z-1">Получите расчет<br class="mobNot"> стоимости за 15 минут</h1>
-            <p class="text-light-gray2 mt-9">Мы посчитаем ваш объем и дадим лучшее предложение для вас.</p>
-            <div class="mt-14 flex flex-col lg:flex-row gap-4">
-                <input class="" placeholder="Имя">
-                <input class="" placeholder="+7 (   )">
-                <button class="bg-light-blue2 py-4 px-8 text-white hover:bg-gray-600">Оставить заявку</button>
+        <div class="mt-5 block lg:hidden">
+            <div class="owl-carousel owl-theme">
+                <div>
+                    <div class="flex flex-col gap-6 p-5">
+                        <a class="flex flex-col" href="./setka.html"><img class="w-" src="assets/imgs/tovar1.png"></a>
+                        <h2 class="text-lg blue lgText">Сетка сварная в рулонах</h2>
+                        <div class="grid grid-cols-2">
+                            <p class="text-slate-400">Металл</p>
+                            <p class="text-end">Сталь</p>
+                            <p class="text-slate-400">Размеры рулона</p>
+                            <p class="text-end">11 вариантов</p>
+                            <p class="text-slate-400">Диаметр</p>
+                            <p class="text-end">2.7 – 5</p>
+                        </div>
+                        <div class="flex flex-col gap-1.5">
+                            <button id="modal21" class="bg-dark-blue text-white py-3">оставить заявку</button>
+                            <a class="flex flex-col" href="./setka.html"><button class="bg-light-blue2 text-white py-3">Подробнее</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex flex-col gap-6 p-5">
+                        <a class="flex flex-col" href="./setka.html"><img class="w-" src="assets/imgs/tovar2.png"></a>
+                        <h2 class="text-lg blue lgText">Сетка сварная в листах</h2>
+                        <div class="grid grid-cols-2">
+                            <p class="text-slate-400">Металл</p>
+                            <p class="text-end">Сталь</p>
+                            <p class="text-slate-400">Размеры рулона</p>
+                            <p class="text-end">11 вариантов</p>
+                            <p class="text-slate-400">Диаметр</p>
+                            <p class="text-end">2.7 – 5</p>
+                        </div>
+                        <div class="flex flex-col gap-1.5">
+                            <button id="modal22" class="bg-dark-blue text-white py-3">оставить заявку</button>
+                            <a class="flex flex-col" href="./setka.html"><button class="bg-light-blue2 text-white py-3">Подробнее</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex flex-col gap-6 p-5">
+                        <a class="flex flex-col" href="./setka.html"><img class="w-" src="assets/imgs/tovar3.png"></a>
+                        <h2 class="text-lg blue lgText">Профлист оцинкованный НС21</h2>
+                        <div class="grid grid-cols-2">
+                            <p class="text-slate-400">Металл</p>
+                            <p class="text-end">Сталь</p>
+                            <p class="text-slate-400">Размеры рулона</p>
+                            <p class="text-end">11 вариантов</p>
+                            <p class="text-slate-400">Диаметр</p>
+                            <p class="text-end">2.7 – 5</p>
+                        </div>
+                        <div class="flex flex-col gap-1.5">
+                            <button id="modal23" class="bg-dark-blue text-white py-3">оставить заявку</button>
+                            <a class="flex flex-col" href="./setka.html"><button class="bg-light-blue2 text-white py-3">Подробнее</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex flex-col gap-6 p-5">
+                        <a class="flex flex-col" href="./setka.html"><img class="w-" src="assets/imgs/tovar3.png"></a>
+                        <h2 class="text-lg blue lgText">Профлист оцинкованный НС35</h2>
+                        <div class="grid grid-cols-2">
+                            <p class="text-slate-400">Металл</p>
+                            <p class="text-end">Сталь</p>
+                            <p class="text-slate-400">Размеры рулона</p>
+                            <p class="text-end">11 вариантов</p>
+                            <p class="text-slate-400">Диаметр</p>
+                            <p class="text-end">2.7 – 5</p>
+                        </div>
+                        <div class="flex flex-col gap-1.5">
+                            <button id="modal24" class="bg-dark-blue text-white py-3">оставить заявку</button>
+                            <a class="flex flex-col" href="./setka.html"><button class="bg-light-blue2 text-white py-3">Подробнее</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex flex-col gap-6 p-5">
+                        <a class="flex flex-col" href="./setka.html"><img class="w-" src="assets/imgs/tovar5.png"></a>
+                        <h2 class="text-lg blue lgText">Сетка рабица</h2>
+                        <div class="grid grid-cols-2">
+                            <p class="text-slate-400">Металл</p>
+                            <p class="text-end">Сталь</p>
+                            <p class="text-slate-400">Размеры рулона</p>
+                            <p class="text-end">11 вариантов</p>
+                            <p class="text-slate-400">Диаметр</p>
+                            <p class="text-end">2.7 – 5</p>
+                        </div>
+                        <div class="flex flex-col gap-1.5">
+                            <button id="modal25" class="bg-dark-blue text-white py-3">оставить заявку</button>
+                            <a class="flex flex-col" href="./setka.html"><button class="bg-light-blue2 text-white py-3">Подробнее</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex flex-col gap-6 p-5">
+                        <a class="flex flex-col" href="./setka.html"><img class="w-" src="assets/imgs/tovar6.png"></a>
+                        <h2 class="text-lg blue lgText">Колючая проволока</h2>
+                        <div class="grid grid-cols-2">
+                            <p class="text-slate-400">Металл</p>
+                            <p class="text-end">Сталь</p>
+                            <p class="text-slate-400">Размеры рулона</p>
+                            <p class="text-end">11 вариантов</p>
+                            <p class="text-slate-400">Диаметр</p>
+                            <p class="text-end">2.7 – 5</p>
+                        </div>
+                        <div class="flex flex-col gap-1.5">
+                            <button id="modal26" class="bg-dark-blue text-white py-3">оставить заявку</button>
+                            <a class="flex flex-col" href="./setka.html"><button class="bg-light-blue2 text-white py-3">Подробнее</button></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
     </div>
+    <div class="mt-24 darkdark py-16 lg:py-30 px-4 lg:px-20 relative overflow-hidden">
+    <img class="absolute bottom-0 lg:top-0 -right-12  right-0 z-0" src="assets/imgs/bg.png">
+    <div class="z2">
+        <p class="bg-light-blue2 py-1 px-3 text-white w-fit lgText text-xs">Оставьте заявку</p>
+        <h1 class="lgray mt-2 z-1">Получите расчет<br class="mobNot"> стоимости за 15 минут</h1>
+        <p class="text-light-gray2 mt-9">Мы посчитаем ваш объем и дадим лучшее предложение для вас.</p>
+        <div class="mt-14 flex flex-col lg:flex-row gap-4">
+            <input class="" placeholder="Имя">
+            <input class="" placeholder="+7 (   )">
+            <button class="bg-light-blue2 py-4 px-8 text-white hover:bg-gray-600">Оставить заявку</button>
+        </div>
+    </div>
+
+</div>
     <div class="mt-14 lg:mt-24 mx-4 lg:mx-20">
         <a name="about"></a>
         <div class="flex gap-12">
@@ -329,17 +421,20 @@
             <div class="flex justify-center items-center"><img class="gridImg9" src="assets/imgs/image%2011.png"></div>
         </div>
     </div>
-    <div class="znot mt-24 darkdark py-16 lg:py-30 px-4 lg:px-20 relative overflow-hidden">
-        <img class="absolute bottom-0 top-0 right-0 z-0 mobNot" src="assets/imgs/bg.png">
+    <div class="mt-24 darkdark py-16 lg:py-30 px-4 lg:px-20 relative overflow-hidden">
+    <img class="absolute bottom-0 lg:top-0 -right-12  right-0 z-0" src="assets/imgs/bg2.png">
+    <div class="z2">
         <p class="bg-light-blue2 py-1 px-3 text-white w-fit lgText text-xs">Оставьте заявку</p>
-        <h1 class="lgray mt-2 z-1">Получите лучшее<br class="mobNot"> предложение на рынке</h1>
+        <h1 class="lgray mt-2 z-1">Получите расчет<br class="mobNot"> стоимости за 15 минут</h1>
         <p class="text-light-gray2 mt-9">Мы посчитаем ваш объем и дадим лучшее предложение для вас.</p>
         <div class="mt-14 flex flex-col lg:flex-row gap-4">
             <input class="" placeholder="Имя">
             <input class="" placeholder="+7 (   )">
-            <button class="bg-light-blue2 py-4 px-8 text-white">Оставить заявку</button>
+            <button class="bg-light-blue2 py-4 px-8 text-white hover:bg-gray-600">Оставить заявку</button>
         </div>
     </div>
+
+</div>
     <div class="mt-14 lg:mt-24 mx-4 lg:mx-20">
         <a name="transport"></a>
         <p class="bg-dark-blue py-1 px-3 text-white w-fit text-xs">клиентам</p>
@@ -484,7 +579,7 @@
                     </svg>
                     обратный звонок
                 </button>
-                <button class="p-4 bg-light-blue2 text-white flex justify-center gap-2">
+                <button class="p-4 bg-light-blue2 text-white flex justify-center items-center gap-2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 1.20001C12.976 1.20101 15.3027 2.1603 17.0517 3.90107C18.8249 5.66624 19.8009 7.98174 19.8002 10.421C19.7991 12.8775 18.8265 15.1913 17.0613 16.9361C15.3005 18.6765 12.9702 19.6351 10.4999 19.6351H10.4962C9.0451 19.6346 7.60635 19.2923 6.31688 18.643L1.22562 19.8L2.33299 14.7715C1.59124 13.4033 1.20048 11.9043 1.2002 10.4184V10.4167V10.4139C1.20247 7.95889 2.17461 5.64212 3.93822 3.89879C5.69871 2.15845 8.02907 1.20001 10.4998 1.20001ZM10.4965 18.1834H10.4998C14.825 18.1834 18.3452 14.701 18.347 10.4205C18.3477 8.37013 17.5234 6.42005 16.0261 4.92946C14.5511 3.46158 12.5884 2.65257 10.4995 2.65172C6.17555 2.65172 2.656 6.13737 2.6533 10.4169C2.6533 11.739 3.02574 13.0795 3.73055 14.2937L3.87231 14.538L3.13696 17.8768L6.52242 17.1075L6.76318 17.238C7.90251 17.856 9.19354 18.1828 10.4965 18.1834ZM7.5618 6.35406H7.96947C8.12103 6.36031 8.28878 6.37223 8.44815 6.72501H8.44801C8.5579 6.96832 8.74169 7.42366 8.88689 7.78342C8.99168 8.04305 9.07638 8.2529 9.09871 8.29734C9.15183 8.4032 9.18735 8.52694 9.11647 8.66828C9.10185 8.69737 9.08896 8.72421 9.07678 8.74958C9.02977 8.84745 8.99332 8.92335 8.90894 9.02163C8.80255 9.14523 8.67343 9.27493 8.57784 9.36973C8.47116 9.47545 8.36037 9.59011 8.48437 9.80197C8.60852 10.014 9.04743 10.73 9.67995 11.2916C10.3631 11.8981 10.9513 12.1556 11.2477 12.2854C11.3039 12.31 11.3496 12.33 11.3835 12.3469C11.5963 12.4529 11.7204 12.4352 11.8444 12.2937C11.9686 12.1524 12.3863 11.6625 12.5282 11.4508C12.6701 11.2386 12.8119 11.274 13.0069 11.3445C13.1925 11.4119 14.1456 11.887 14.4208 12.0242C14.4348 12.0312 14.447 12.0373 14.4573 12.0424C14.4989 12.0631 14.5378 12.0818 14.5738 12.0991C14.7221 12.1703 14.8223 12.2185 14.8651 12.2895C14.9182 12.378 14.9182 12.802 14.741 13.2966C14.5637 13.7911 13.6951 14.2682 13.305 14.3034C13.2675 14.3068 13.2303 14.3112 13.1919 14.3157C12.8316 14.3579 12.3766 14.4112 10.7524 13.7735C8.75383 12.9887 7.43621 11.0438 7.16421 10.6423C7.14194 10.6094 7.12668 10.5869 7.11863 10.5762L7.11617 10.5729C7.00116 10.4199 6.25003 9.42007 6.25003 8.3856C6.25003 7.41014 6.7315 6.89878 6.95305 6.66347C6.9682 6.64738 6.98214 6.63257 6.99462 6.619C7.18951 6.40714 7.4199 6.35406 7.5618 6.35406Z" fill="#F5F5F5"/>
                     </svg>
@@ -498,5 +593,16 @@
         </div>
     </div>
 
+
+<script src="./scripts/jquery.min.js"></script>
+<script src="./scripts/owl.carousel.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".owl-carousel").owlCarousel({
+            items:1,
+            dots: true
+        });
+    });
+</script>
 </body>
 </html>
