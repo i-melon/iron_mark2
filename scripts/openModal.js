@@ -19,4 +19,21 @@ addEventListener("DOMContentLoaded", function () {
     document.getElementById('modal9').addEventListener("click", openModal)
     document.getElementById('modal10').addEventListener("click", openModal)
     document.getElementById('modal11').addEventListener("click", openModal)
+    document.getElementById('modal21').addEventListener("click", openModal)
+    document.getElementById('modal22').addEventListener("click", openModal)
+    document.getElementById('modal23').addEventListener("click", openModal)
+    document.getElementById('modal24').addEventListener("click", openModal)
+    document.getElementById('modal25').addEventListener("click", openModal)
+    document.getElementById('modal26').addEventListener("click", openModal)
+
+
+    document.getElementById('openDrop').addEventListener("click", function (){
+        document.getElementById('dropDown').style.display='block'
+    })
+    document.getElementById('openDrop2').addEventListener("click", function (){
+        document.getElementById('dropDown').style.display='block'
+    })
+    document.getElementById('dropDown').addEventListener("click", function (){
+        document.getElementById('dropDown').style.display='none'
+    })
 })
