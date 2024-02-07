@@ -30,9 +30,6 @@ addEventListener("DOMContentLoaded", function () {
     document.getElementById('openDrop').addEventListener("click", function (){
         document.getElementById('dropDown').style.display='block'
     })
-    document.getElementById('openDrop2').addEventListener("click", function (){
-        document.getElementById('dropDown').style.display='block'
-    })
     document.getElementById('dropDown').addEventListener("click", function (){
         document.getElementById('dropDown').style.display='none'
     })

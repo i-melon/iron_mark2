@@ -72,3 +72,4 @@ input{
 .-right-12{
     right: -100px;
 }
+#dropDown{display: none; z-index: 5}
