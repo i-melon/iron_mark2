@@ -4,21 +4,17 @@ document.addEventListener('DOMContentLoaded', function() {
     var xhr = new XMLHttpRequest();
     xhr.onload = function() {
         if (xhr.status === 200) {
-            resetForm()
             redirectToThanks()
         }
         else if (xhr.status === 500) {
-            console.error('Error:', xhr.response);
-            alert('Произошла какая-то ошибка. Мы обязательно ее решим! ' +
-                'Просим вас связаться с нами по почте - info.estetika.agency@gmail.com.');
+            handleError()
         }
+        resetForm()
 
         // document.getElementById("numberForm").style.display="none"
     };
     xhr.onerror = function() {
-        console.error('Error:', xhr.response);
-        alert('Произошла какая-то ошибка. Мы обязательно ее решим! ' +
-            'Просим вас связаться с нами по почте - info.estetika.agency@gmail.com.');
+        handleError()
     };
     xhr.addEventListener("loadstart", function() {
         document.getElementById("loader").classList.add('loading');
@@ -81,6 +77,12 @@ document.addEventListener('DOMContentLoaded', function() {
         if (currentForm.classList.contains('modalContent')) {
             currentForm.querySelectorAll('#closeModal')[0].click()
         }
+    }
+
+    function handleError() {
+        console.error('Error:', xhr.response);
+        alert('Произошла какая-то ошибка. Мы обязательно ее решим! ' +
+            'Просим вас связаться с нами по почте - ms7057555277@yandex.ru');
     }
 
     function redirectToThanks() {
