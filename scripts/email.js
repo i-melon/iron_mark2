@@ -3,8 +3,16 @@ document.addEventListener('DOMContentLoaded', function() {
     // LOADER LOGIC
     var xhr = new XMLHttpRequest();
     xhr.onload = function() {
-        resetForm()
-        redirectToThanks()
+        if (xhr.status === 200) {
+            resetForm()
+            redirectToThanks()
+        }
+        else if (xhr.status === 500) {
+            console.error('Error:', xhr.response);
+            alert('Произошла какая-то ошибка. Мы обязательно ее решим! ' +
+                'Просим вас связаться с нами по почте - info.estetika.agency@gmail.com.');
+        }
+
         // document.getElementById("numberForm").style.display="none"
     };
     xhr.onerror = function() {
