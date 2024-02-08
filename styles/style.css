@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 #openText1{display: none;}
 #closeButton1{display: none}
 #openText2{display: none;}

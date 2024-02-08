@@ -9,47 +9,69 @@
     <style>
         @import "./styles/owl.carousel.min.css";
         @import "./styles/owl.theme.default.min.css";
-        @import "styles/style.css";
+        @import "./styles/style.css";
         @import "./styles/fonts.css";
-        @import "./output.css";
+        @import "./styles/output.css";
+        @import "./styles/output.css";
         @import "./styles/overall.css";
-        @import "styles/media.css";
+        @import "./styles/media.css";
+        @import "./styles/loader.css";
     </style>
-    <script src="scripts/answrs.js"></script>
-    <script src="scripts/openModal.js"></script>
 
+    <!-- Packages -->
+    <script src="https://unpkg.com/imask"></script>
+
+    <!-- JS -->
+    <script src="scripts/email.js"></script>
+    <script src="scripts/answers.js"></script>
+    <script src="scripts/openModal.js"></script>
 </head>
-<body class="">
-<div id="dropDown" class="fixed w-full h-full bg-modal top-0 left-0 z-3">
-    <div class="dropDownContent w-full flex flex-col bg-white px-5 py-12 gap-4">
-        <button id="closeDrop" class="absolute top-4 right-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.3565 4.35653C4.71188 4.00115 5.28806 4.00115 5.64343 4.35653L9.99997 8.71306L14.3565 4.35653C14.7119 4.00115 15.2881 4.00115 15.6434 4.35653C15.9988 4.71191 15.9988 5.28809 15.6434 5.64346L11.2869 10L15.6434 14.3565C15.9988 14.7119 15.9988 15.2881 15.6434 15.6435C15.2881 15.9988 14.7119 15.9988 14.3565 15.6435L9.99997 11.2869L5.64343 15.6435C5.28806 15.9988 4.71188 15.9988 4.3565 15.6435C4.00112 15.2881 4.00112 14.7119 4.3565 14.3565L8.71303 10L4.3565 5.64346C4.00112 5.28809 4.00112 4.71191 4.3565 4.35653Z" fill="#2750BC"/>
-            </svg>
-        </button>
-        <a href="#products" class="text-xl lgText">Продукция</a>
-        <a href="#about" class="text-xl lgText">О компании</a>
-        <a href="#transport" class="text-xl lgText">Доставка</a>
-        <a href="#contacts" class="text-xl lgText">Контакты</a>
-        <p class="text-xl lgText">+7 701 399 35 38</p>
-    </div>
-</div>
-<div id="modalWrapper" class="fixed w-full h-full bg-modal top-0 left-0 z-4 flex justify-center items-center">
-    <div class="modalContent bg-white py-16 px-12 flex flex-col gap-8 relative items-stretch ">
-        <button id="closeModal" class="absolute top-4 right-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.3565 4.35653C4.71188 4.00115 5.28806 4.00115 5.64343 4.35653L9.99997 8.71306L14.3565 4.35653C14.7119 4.00115 15.2881 4.00115 15.6434 4.35653C15.9988 4.71191 15.9988 5.28809 15.6434 5.64346L11.2869 10L15.6434 14.3565C15.9988 14.7119 15.9988 15.2881 15.6434 15.6435C15.2881 15.9988 14.7119 15.9988 14.3565 15.6435L9.99997 11.2869L5.64343 15.6435C5.28806 15.9988 4.71188 15.9988 4.3565 15.6435C4.00112 15.2881 4.00112 14.7119 4.3565 14.3565L8.71303 10L4.3565 5.64346C4.00112 5.28809 4.00112 4.71191 4.3565 4.35653Z" fill="#2750BC"/>
-            </svg>
-        </button>
-        <h2 class="lgText blue text-2xl text-center">Оставить заявку</h2>
-        <p class="text-sm text-gray-400 text-center">Мы перезвоним вам в самое ближайшее время, чтобы обсудить подробности вашего заказа.</p>
-        <div>
-            <p class="text-gray-400 text-xs">Телефон</p>
-            <input class="bgNOt w-full mt-2" placeholder="+7 (   )">
-            <button class="bg-light-blue2 text-white flex justify-center w-full py-3 mt-5">отправить</button>
+
+<body>
+
+    <!-- Loader -->
+    <section id="loader">
+        <div id="loader-content"></div>
+    </section>
+
+    <!--  Dropdown Element For Mobile  -->
+    <div id="dropDown" class="fixed w-full h-full bg-modal top-0 left-0 z-3">
+        <div class="dropDownContent w-full flex flex-col bg-white px-5 py-12 gap-4">
+            <button id="closeDrop" class="absolute top-4 right-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.3565 4.35653C4.71188 4.00115 5.28806 4.00115 5.64343 4.35653L9.99997 8.71306L14.3565 4.35653C14.7119 4.00115 15.2881 4.00115 15.6434 4.35653C15.9988 4.71191 15.9988 5.28809 15.6434 5.64346L11.2869 10L15.6434 14.3565C15.9988 14.7119 15.9988 15.2881 15.6434 15.6435C15.2881 15.9988 14.7119 15.9988 14.3565 15.6435L9.99997 11.2869L5.64343 15.6435C5.28806 15.9988 4.71188 15.9988 4.3565 15.6435C4.00112 15.2881 4.00112 14.7119 4.3565 14.3565L8.71303 10L4.3565 5.64346C4.00112 5.28809 4.00112 4.71191 4.3565 4.35653Z" fill="#2750BC"/>
+                </svg>
+            </button>
+            <a href="#products" class="text-xl lgText">Продукция</a>
+            <a href="#about" class="text-xl lgText">О компании</a>
+            <a href="#transport" class="text-xl lgText">Доставка</a>
+            <a href="#contacts" class="text-xl lgText">Контакты</a>
+            <p class="text-xl lgText">+7 701 399 35 38</p>
         </div>
     </div>
-</div>
+
+    <!--  Modal Element  -->
+    <div id="modalWrapper" class="fixed w-full h-full bg-modal top-0 left-0 z-4 flex justify-center items-center">
+        <form class="modalContent bg-white py-16 px-12 flex flex-col gap-8 relative items-stretch">
+            <button id="closeModal" type="button" class="absolute top-4 right-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.3565 4.35653C4.71188 4.00115 5.28806 4.00115 5.64343 4.35653L9.99997 8.71306L14.3565 4.35653C14.7119 4.00115 15.2881 4.00115 15.6434 4.35653C15.9988 4.71191 15.9988 5.28809 15.6434 5.64346L11.2869 10L15.6434 14.3565C15.9988 14.7119 15.9988 15.2881 15.6434 15.6435C15.2881 15.9988 14.7119 15.9988 14.3565 15.6435L9.99997 11.2869L5.64343 15.6435C5.28806 15.9988 4.71188 15.9988 4.3565 15.6435C4.00112 15.2881 4.00112 14.7119 4.3565 14.3565L8.71303 10L4.3565 5.64346C4.00112 5.28809 4.00112 4.71191 4.3565 4.35653Z" fill="#2750BC"/>
+                </svg>
+            </button>
+
+            <h2 class="lgText blue text-2xl text-center">Оставить заявку</h2>
+            <p class="text-sm text-gray-400 text-center">Мы перезвоним вам в самое ближайшее время, чтобы обсудить подробности вашего заказа.</p>
+            <div>
+                <label for="modal-phone-input" class="text-gray-400 text-xs">Телефон</label>
+                <input type="text" id="modal-phone-input" name="phone"
+                       class="bgNOt text-black w-full mt-2"
+                       placeholder="+7 (700) 000-00-00">
+                <button class="bg-light-blue2 text-white flex justify-center w-full py-3 mt-5">отправить</button>
+            </div>
+        </form>
+    </div>
+
+    <!--  Navbar Block  -->
     <header class="flex justify-between my-0 lg:my-5 mx-0 ml-4 lg:mx-20 items-center">
         <div class="headerLeft"><img class="w-20" src="assets/imgs/logo.png"></div>
         <div class="headerRight flex gap-8 items-center">
@@ -81,6 +103,8 @@
             </div>
         </div>
     </header>
+
+    <!--  Main Block  -->
     <div class="titleBlock mx-4 lg:mx-20 mt-11">
         <div class="flex flex-col lg:flex-row justify-between items-start">
             <h1 class="blue">Металлопрокат <br class="mobNot">от завода-<br class="mobNot">производителя <br class="mobNot">с доставкой по РК</h1>
@@ -157,6 +181,8 @@
             </div>
         </div>
     </div>
+
+    <!--  Catalog Block  -->
     <div class="mt-14 lg:mt-32 mx-4 lg:mx-20">
         <a name="products"></a>
         <p class="bg-dark-blue py-1 px-3 text-white w-fit lgText text-xs">продукция</p>
@@ -191,7 +217,7 @@
                 </div>
                 <div class="flex flex-col gap-1.5">
                     <button id="modal4" class="bg-dark-blue text-white py-3">оставить заявку</button>
-                    <a class="flex flex-col" href="./setka.html"><button class="bg-light-blue2 text-white py-3">Подробнее</button></a>
+                    <a class="flex flex-col" href="./setkaList.html"><button class="bg-light-blue2 text-white py-3">Подробнее</button></a>
                 </div>
             </div>
             <div class="flex flex-col gap-6 p-5">
@@ -207,7 +233,7 @@
                 </div>
                 <div class="flex flex-col gap-1.5">
                     <button id="modal5" class="bg-dark-blue text-white py-3">оставить заявку</button>
-                    <a class="flex flex-col" href="./setka.html"><button class="bg-light-blue2 text-white py-3">Подробнее</button></a>
+                    <a class="flex flex-col" href="./prof21.html"><button class="bg-light-blue2 text-white py-3">Подробнее</button></a>
                 </div>
             </div>
             <div class="flex flex-col gap-6 p-5">
@@ -223,7 +249,7 @@
                 </div>
                 <div class="flex flex-col gap-1.5">
                     <button id="modal6" class="bg-dark-blue text-white py-3">оставить заявку</button>
-                    <a class="flex flex-col" href="./setka.html"><button class="bg-light-blue2 text-white py-3">Подробнее</button></a>
+                    <a class="flex flex-col" href="./prof35.html"><button class="bg-light-blue2 text-white py-3">Подробнее</button></a>
                 </div>
             </div>
             <div class="flex flex-col gap-6 p-5">
@@ -373,20 +399,23 @@
         </div>
 
     </div>
+
+    <!--  First Form Block  -->
     <div class="mt-24 darkdark py-16 lg:py-30 px-4 lg:px-20 relative overflow-hidden">
-    <img class="absolute bottom-0 lg:top-0 -right-12  right-0 z-0" src="assets/imgs/bg.png">
-    <div class="z2">
-        <p class="bg-light-blue2 py-1 px-3 text-white w-fit lgText text-xs">Оставьте заявку</p>
-        <h1 class="lgray mt-2 z-1">Получите расчет<br class="mobNot"> стоимости за 15 минут</h1>
-        <p class="text-light-gray2 mt-9">Мы посчитаем ваш объем и дадим лучшее предложение для вас.</p>
-        <div class="mt-14 flex flex-col lg:flex-row gap-4">
-            <input class="" placeholder="Имя">
-            <input class="" placeholder="+7 (   )">
-            <button class="bg-light-blue2 py-4 px-8 text-white hover:bg-gray-600">Оставить заявку</button>
-        </div>
+        <img class="absolute bottom-0 lg:top-0 -right-12  right-0 z-0" src="assets/imgs/bg.png">
+        <form class="z2">
+            <p class="bg-light-blue2 py-1 px-3 text-white w-fit lgText text-xs">Оставьте заявку</p>
+            <h1 class="lgray mt-2 z-1">Получите расчет<br class="mobNot"> стоимости за 15 минут</h1>
+            <p class="text-light-gray2 mt-9">Мы посчитаем ваш объем и дадим лучшее предложение для вас.</p>
+            <div class="mt-14 flex flex-col lg:flex-row gap-4">
+                <input name="name" type="text" placeholder="Имя">
+                <input name="phone" type="text" id="first-phone-input" placeholder="+7 (700) 000-00-00">
+                <button class="bg-light-blue2 py-4 px-8 text-white hover:bg-gray-600">Оставить заявку</button>
+            </div>
+        </form>
     </div>
 
-</div>
+    <!--  About Us Block  -->
     <div class="mt-14 lg:mt-24 mx-4 lg:mx-20">
         <a name="about"></a>
         <div class="flex gap-12">
@@ -418,6 +447,8 @@
             </div>
         </div>
     </div>
+
+    <!--  Clients & Partners Block  -->
     <div class="mt-14 lg:mt-24 mx-4 lg:mx-20">
         <div class="flex flex-col lg:flex-row justify-between">
             <h1 class="blue">Наши клиенты <br class="mobNot">и партнеры</h1>
@@ -435,20 +466,23 @@
             <div class="flex justify-center items-center"><img class="gridImg9" src="assets/imgs/image%2011.png"></div>
         </div>
     </div>
+
+    <!--  Second Form Block  -->
     <div class="mt-24 darkdark py-16 lg:py-30 px-4 lg:px-20 relative overflow-hidden">
-    <img class="absolute bottom-0 lg:top-0 -right-12  right-0 z-0" src="assets/imgs/bg2.png">
-    <div class="z2">
-        <p class="bg-light-blue2 py-1 px-3 text-white w-fit lgText text-xs">Оставьте заявку</p>
-        <h1 class="lgray mt-2 z-1">Получите расчет<br class="mobNot"> стоимости за 15 минут</h1>
-        <p class="text-light-gray2 mt-9">Мы посчитаем ваш объем и дадим лучшее предложение для вас.</p>
-        <div class="mt-14 flex flex-col lg:flex-row gap-4">
-            <input class="" placeholder="Имя">
-            <input class="" placeholder="+7 (   )">
-            <button class="bg-light-blue2 py-4 px-8 text-white hover:bg-gray-600">Оставить заявку</button>
-        </div>
+        <img class="absolute bottom-0 lg:top-0 -right-12  right-0 z-0" src="assets/imgs/bg2.png">
+        <form class="z2">
+            <p class="bg-light-blue2 py-1 px-3 text-white w-fit lgText text-xs">Оставьте заявку</p>
+            <h1 class="lgray mt-2 z-1">Получите расчет<br class="mobNot"> стоимости за 15 минут</h1>
+            <p class="text-light-gray2 mt-9">Мы посчитаем ваш объем и дадим лучшее предложение для вас.</p>
+            <div class="mt-14 flex flex-col lg:flex-row gap-4">
+                <input name="name" type="text" placeholder="Имя">
+                <input name="phone" type="text" id="second-phone-input" placeholder="+7 (700) 000-00-00">
+                <button class="bg-light-blue2 py-4 px-8 text-white hover:bg-gray-600">Оставить заявку</button>
+            </div>
+        </form>
     </div>
 
-</div>
+    <!--  Map Block  -->
     <div class="mt-14 lg:mt-24 mx-4 lg:mx-20">
         <a name="transport"></a>
         <p class="bg-dark-blue py-1 px-3 text-white w-fit text-xs">клиентам</p>
@@ -468,6 +502,8 @@
 
         </div>
     </div>
+
+    <!--  Q&A Block  -->
     <div class="mt-14 lg:mt-24 mx-4 lg:mx-20">
         <p class="bg-dark-blue py-1 px-3 text-white w-fit text-xs">клиентам</p>
         <h1 class="blue mt-4">Вопросы и ответы</h1>
@@ -566,20 +602,21 @@
 
             <p class="text-gray-400" id="openText6">Да, мы доставляем по всему Казахстану</p>
         </div>
-
-
-
     </div>
+
+    <!--  Third Form Block  -->
     <div class="darkdark mt-14 lg:mt-24 py-16 lg:py-32 px-4 flex flex-col items-stretch lg:items-center">
         <p class="bg-light-blue2 py-1 px-3 text-white w-fit lgText text-xs">Оставьте заявку</p>
         <h1 class="lgray mt-4">Остались вопросы?</h1>
         <p class="lgray mt-9">Оставьте ваши данные, мы позвоним вам и подберем лучшее предложение для вас.</p>
-        <div class="mt-14 flex flex-col items-stretch lg:flex-row gap-4">
-            <input class="" placeholder="Имя">
-            <input class="" placeholder="+7 (   )">
+        <form class="mt-14 flex flex-col items-stretch lg:flex-row gap-4">
+            <input name="name" type="text" placeholder="Имя">
+            <input name="phone" type="text" id="third-phone-input" placeholder="+7 (700) 000-00-00">
             <button class="bg-light-blue2 px-8 py-3 text-white">Оставить заявку</button>
-        </div>
+        </form>
     </div>
+
+    <!--  Contacts Block  -->
     <div class="mx-4 lg:mx-20 mt-14 lg:mt-24 flex flex-col-reverse lg:flex-row justify-between">
         <a name="contacts"></a>
         <div class="w-full">
@@ -620,15 +657,41 @@
     </div>
 
 
-<script src="./scripts/jquery.min.js"></script>
-<script src="./scripts/owl.carousel.min.js"></script>
-<script>
-    $(document).ready(function(){
-        $(".owl-carousel").owlCarousel({
-            items:1,
-            dots: true
+    <script src="./scripts/jquery.min.js"></script>
+    <script src="./scripts/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".owl-carousel").owlCarousel({
+                items:1,
+                dots: true
+            });
+
+            // PHONE MASK
+            IMask(
+                document.getElementById('modal-phone-input'),
+                {
+                    mask: '+{7} (700) 000-00-00'
+                }
+            )
+            IMask(
+                document.getElementById('first-phone-input'),
+                {
+                    mask: '+{7} (700) 000-00-00'
+                }
+            )
+            IMask(
+                document.getElementById('second-phone-input'),
+                {
+                    mask: '+{7} (700) 000-00-00'
+                }
+            )
+            IMask(
+                document.getElementById('third-phone-input'),
+                {
+                    mask: '+{7} (700) 000-00-00'
+                }
+            )
         });
-    });
-</script>
+    </script>
 </body>
 </html>

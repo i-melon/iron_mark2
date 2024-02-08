@@ -46,6 +46,7 @@ h1{
 .blue{color: #343F53;}
 .lgray{color: #E8E8F6;}
 .darkdark{background: #243452}
+
 input{
     display: flex;
     padding: 15px var(--Spacing-m, 12px);
@@ -54,8 +55,13 @@ input{
     align-self: stretch;
     border: 1px solid rgba(250, 250, 252, 0.16);
     background: #243452;
+    color: black;
+}
+
+.darkdark input{
     color: white;
 }
+
 .borderTop{
     border-top: 1px solid rgba(16, 56, 92, 0.12);
 }
