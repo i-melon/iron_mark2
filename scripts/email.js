@@ -86,10 +86,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function redirectToThanks() {
-        // let aLink = document.createElement('a');
-        // aLink.href = "./thanks.html"
-        // aLink.click()
-        alert("Спасибо за вашу заявку! Мы свяжемся с вами в ближайшее время!")
+        let aLink = document.createElement('a');
+        aLink.href = "./thanks.html"
+        aLink.click()
+        // alert("Спасибо за вашу заявку! Мы свяжемся с вами в ближайшее время!")
     }
 
     function checkPhoneNumberInputSize(phoneNumber) {
